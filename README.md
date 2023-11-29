@@ -8,8 +8,13 @@ SlmMail
 
 Created by Jurian Sluiman and Michaël Gallego
 
+Modified by Thomas Johnson
+
 > Note that API calls are not currently unit-tested (although we have properly test them manually). Therefore, you
 are encouraged to test your API usage before going into production.
+
+> This branch is specifically made to fix Postmark's breaking change that occurred on November 28, 2023 for much older
+applications running on SlmMail version 1.5.1.
 
 Introduction
 ------------
