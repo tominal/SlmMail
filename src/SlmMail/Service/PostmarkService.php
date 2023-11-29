@@ -341,6 +341,8 @@ class PostmarkService extends AbstractMailService
         switch ($response->getStatusCode()) {
             case 401:
                 throw new Exception\InvalidCredentialsException('Authentication error: missing or incorrect Postmark API Key header');
+            case 415:
+                throw new Exception\RuntimeException('Postmark header error, please check your request');
             case 422:
                 throw new Exception\ValidationErrorException(sprintf(
                     'An error occured on Postmark (error code %s), message: %s', $result['ErrorCode'], $result['Message']
